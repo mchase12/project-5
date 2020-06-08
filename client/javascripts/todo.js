@@ -66,7 +66,7 @@ let deleteComment = () => {
   window.location.reload();
 }
 
-let getComment = () => {
+let getToDo = () => {
   //clear outDiv
   $("#outDiv").html("");
   let pElem;
@@ -74,7 +74,7 @@ let getComment = () => {
   let content = $("#getOne").val();
   $.ajax({
       method: "GET",
-      url: "http://localhost:8888/getcomment/" + content
+      url: "http://localhost:8888/gettodo/" + content
     })
     .done(function(msg) {
       console.log("Comment retrieved: " + msg.message.data);

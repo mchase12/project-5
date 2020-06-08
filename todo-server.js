@@ -58,7 +58,7 @@ app.get('/todos', (req, res) => {
 });
 
 //endpoint to get a single comment
-app.get('/getcomment/:data', (req, res, next) => {
+app.get('/gettodo/:data', (req, res, next) => {
   const data = req.params.data;
 
   db.collection(collName).findOne({
